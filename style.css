@@ -1,0 +1,158 @@
+body {
+   background-color: antiquewhite;
+   text-align:left;
+   font-size: 1.1em;
+   font-family: "Montserrat", sans-serif;
+}
+
+.haut {
+  display: flex;
+  justify-content: space-around; /* espace égal entre les liens */
+  align-items: center;           /* centre verticalement */
+  width: 100%;                   /* prend toute la largeur */
+  padding: 10px 0;               /* un peu d’espace en haut et en bas */
+}
+
+h1 {
+  font-size: 2.5em;
+  color: blue;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.superficie {
+  color: blue;
+  font-style: normal;
+}
+
+.entete {
+  background: linear-gradient(#0078f9,#fff94c);
+  text-align: center;
+  opacity: 0.8;
+} 
+
+.photo {
+  text-align: center;
+  text-decoration: underline;
+  color: #b3ae23;
+  background-position: center;
+  border: 2px solid #ddd;          /* cadre gris clair */
+  border-radius: 15px;               /* coins arrondis */
+  padding: 20px;                    /* espace intérieur */
+  margin: 30px auto;                /* espace autour + centrage */
+  width: fit-content;               /* s’adapte au contenu */
+  box-shadow: 0 4px 15px rgba(21, 21, 21, 0.2);
+}
+
+.cta {
+  display: block;              /* transforme le lien en bloc */
+  width: fit-content;          /* il s’adapte à la taille du texte */
+  margin: 30px auto;           /* le centre horizontalement */
+  text-align: center;          /* aligne bien le texte à l’intérieur */
+  text-decoration: underline;
+  font-weight: normal;
+  font-size: 20px;
+  text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+  padding: 20px 30px;
+  background-color: #f0e68c;   /* optionnel : fond clair pour le mettre en valeur */
+  border-radius: 15px;          /* coins arrondis, joli rendu */
+  border: 3px solid #ddd; 
+}
+
+
+img:hover {
+  opacity: 0.8;
+} 
+
+a:active {
+  background-color: rgb(164, 186, 18);
+}
+
+a:hover {
+  color:#0078f9;
+}
+
+a:focus {
+  color: darkorchid;
+  background-color: aquamarine;
+}
+
+p {
+  text-align: justify;
+  padding: 16px;
+  margin: 15px 20px 15px 20px;
+}
+
+.accueil-photos div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;         /* les images passent à la ligne si besoin */
+  justify-content: center;
+  gap: 15px;                   /* espace entre les images */
+  margin: 15px auto;
+}
+
+.accueil-photos img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 5px 5px rgba(21, 21, 21, 0.2);
+  border: 1px solid #171616;
+  transition: transform 0.5s;
+}
+
+.accueil-photos img:hover {
+  transform: scale(1.05);  /* petit zoom au survol */
+  opacity: 0.8;
+}
+
+.les-titres {
+  display: flex;
+  flex-direction: column;
+  text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+  margin: 15px;
+  width: fit-content;
+}
+
+.element {
+  text-decoration: underline;
+  color: rgb(22, 197, 98);
+  font-size: 19px;
+  background-color: white;
+}
+
+
+.box {
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.conteneur {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 100px 100px 100px 100px;
+    gap: 10px;
+    justify-content: center;
+    background-color: plum;
+    width: fit-content;
+    margin: auto;
+    grid-gap: 10px;
+}
+
+.une {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.huit {
+    grid-column-start: 1;
+    grid-column-end: 4;
+} 
+
+
+.neuf {
+    grid-column-start: 1;
+    grid-column-end : 4;
+}
+
+
