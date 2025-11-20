@@ -25,10 +25,36 @@ h1 {
   font-style: normal;
 }
 
+/* ============================= */
+/* Entête principal - Image + texte uniforme */
+/* ============================= */
 .entete {
-  background: linear-gradient(#0078f9,#fff94c);
-  text-align: center;
-  opacity: 0.8;
+    background: linear-gradient(to right, #0078f9, #fff94c);
+    text-align: center;
+    padding: 15px 10px;      /* espace vertical suffisant */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;      /* centre verticalement image + texte */
+    justify-content: center;  /* centre horizontalement */
+    gap: 15px;                /* espace entre image et texte */
+    min-height: 120px;        /* hauteur minimale identique sur toutes les pages */
+}
+
+.entete img {
+    height: 100px;   /* hauteur fixe pour toutes les images d’entête */
+    width: auto;     
+    display: block;  /* évite les décalages de ligne */
+}
+
+.titre-entete {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+
+.titre-entete:hover {
+    color: #0078f9;
 } 
 
 .photo {
@@ -113,4 +139,3 @@ p {
   margin: 15px;
   width: fit-content;
 }
-
