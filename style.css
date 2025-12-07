@@ -1,11 +1,9 @@
 /* ----------- BASE GENERALE ----------- */
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: "Montserrat", sans-serif;
   line-height: 1.6;
@@ -13,65 +11,65 @@ body {
   color: #333;
   padding-bottom: 40px;
 }
-
 h1, h2 {
   margin-bottom: 20px;
   text-align: center;
   font-weight: 700;
 }
-
 p {
   margin-bottom: 15px;
 }
 
-
 /* ----------- HEADER ----------- */
-
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 25px;
-  background: #fff;
+  background: #005bbb;
   flex-wrap: wrap;
-  border-bottom: 2px solid #e4e4e4;
+  border-bottom: 2px solid #004494;
 }
-
 .menu {
   display: flex;
   gap: 20px;
 }
-
 .menu a {
   text-decoration: none;
-  color: #005bbb;
+  color: #ffffff;
   font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 6px;
   transition: 0.3s;
 }
-
 .menu a:hover {
-  color: #ffdd00;
+  background: #ffdd00;
+  color: #333;
 }
-
 .entete {
   display: flex;
   align-items: center;
   gap: 15px;
 }
-
 .entete img {
   width: 90px;
   border-radius: 8px;
 }
-
+.entete a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.entete a:hover {
+  color: #ffdd00;
+}
 
 /* ----------- PHOTO PRINCIPALE ----------- */
-
 .photo {
   text-align: center;
   margin: 30px auto;
 }
-
 .photo img {
   width: 70%;
   max-width: 600px;
@@ -79,14 +77,11 @@ header {
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-
 /* ----------- GALERIE ----------- */
-
 .accueil-photos {
   margin: 40px auto;
   width: 90%;
 }
-
 .accueil-photos div {
   display: flex;
   justify-content: center;
@@ -94,22 +89,20 @@ header {
   flex-wrap: wrap;
   margin-bottom: 20px;
 }
-
 .accueil-photos img {
   width: 30%;
   min-width: 180px;
+  height: 200px;
+  object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: 0.3s;
 }
-
 .accueil-photos img:hover {
   transform: scale(1.04);
 }
 
-
 /* ----------- NAVIGATION INTERNE ----------- */
-
 nav ul {
   list-style: none;
   display: flex;
@@ -118,7 +111,6 @@ nav ul {
   flex-wrap: wrap;
   margin: 30px 0;
 }
-
 nav a {
   text-decoration: none;
   padding: 8px 15px;
@@ -127,15 +119,12 @@ nav a {
   color: white;
   transition: 0.3s;
 }
-
 nav a:hover {
   background: #ffdd00;
   color: #333;
 }
 
-
 /* ----------- SECTIONS ----------- */
-
 section {
   width: 90%;
   max-width: 900px;
@@ -146,9 +135,7 @@ section {
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-
 /* ----------- CTA ----------- */
-
 .cta {
   display: block;
   width: fit-content;
@@ -161,90 +148,75 @@ section {
   border-radius: 8px;
   transition: 0.3s;
 }
-
 .cta:hover {
   background: #005bbb;
   color: #fff;
 }
 
-
 /* ----------- FOOTER ----------- */
-
 footer {
   margin-top: 50px;
   text-align: center;
 }
-
+footer p {
+  color: #666;
+  margin-bottom: 15px;
+}
 footer img {
   width: 40px;
   margin: 0 10px;
   transition: 0.3s;
 }
-
 footer img:hover {
   transform: scale(1.1);
 }
 
-
 /* ----------- RESPONSIVE TABLETTES ----------- */
-
 @media (max-width: 900px) {
-
   .entete {
     flex-direction: column;
     text-align: center;
   }
-
   .menu {
     flex-wrap: wrap;
     justify-content: center;
   }
-
   .accueil-photos img {
     width: 45%;
+    height: 180px;
   }
 }
 
-
 /* ----------- RESPONSIVE MOBILES ----------- */
-
 @media (max-width: 600px) {
-
   header {
     flex-direction: column;
     text-align: center;
     gap: 15px;
   }
-
   .menu {
     flex-direction: column;
     gap: 10px;
   }
-
   .entete img {
     width: 70px;
   }
-
   .photo img {
     width: 90%;
   }
-
   .accueil-photos img {
     width: 90%;
+    height: 160px;
   }
-
   nav ul {
     flex-direction: column;
   }
-
   section {
     padding: 15px;
   }
-
   h1 {
     font-size: 1.6rem;
   }
-
   h2 {
     font-size: 1.3rem;
   }
