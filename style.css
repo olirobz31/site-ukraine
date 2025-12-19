@@ -254,3 +254,6 @@ footer img:hover {
   z-index: 10000; /* assure que la croix est au-dessus de l'image */
 }
 
+.photo img {
+    cursor: pointer !important;
+}
