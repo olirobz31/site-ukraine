@@ -166,7 +166,15 @@
                 }
             } catch (error) {
                 console.error('Erreur détaillée:', error);
-                messageDiv.textContent = '❌ Erreur de connexion: ' + error.message + '. Veuillez réessayer.';
+                console.error('Type d\'erreur:', error.name);
+                console.error('Stack:', error.stack);
+
+                let errorMessage = '❌ Erreur de connexion: ' + error.message;
+                if (error.name === 'TypeError' && error.message.includes('Failed to fetch')) {
+                    errorMessage += ' (Problème CORS ou réseau)';
+                }
+
+                messageDiv.textContent = errorMessage + '. Veuillez réessayer.';
                 messageDiv.className = 'message error';
                 messageDiv.style.display = 'block';
             } finally {
