@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAjout de la bannière de consentement RGPD et du système reCAPTCHA v3\n\n- Création de la bannière de cookies conforme RGPD avec modal de paramètres\n- Intégration de Google reCAPTCHA v3 pour la protection anti-spam\n- Mise à jour des politiques de confidentialité et cookies\n- Chargement conditionnel de reCAPTCHA selon le consentement utilisateur\n- Design aux couleurs ukrainiennes \\(bleu et jaune\\)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
+    ]
+  }
+}
