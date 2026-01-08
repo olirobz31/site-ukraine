@@ -6,7 +6,7 @@
     <title>Contact - Ukraine</title>
     <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-    <script src="https://www.google.com/recaptcha/api.js?render=6LfVXZsqAAAAABnLKoN_lhJVe8cQxM9Qvl8T0O8g"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdolUQsAAAAAHGCD5SZQn4cfvB_FjrQ3fcKfIa1"></script>
     <style>
         .contact-form {
             max-width: 600px;
@@ -131,7 +131,7 @@
 
             try {
                 // Obtenir le token reCAPTCHA
-                const token = await grecaptcha.execute('6LfVXZsqAAAAABnLKoN_lhJVe8cQxM9Qvl8T0O8g', {action: 'submit'});
+                const token = await grecaptcha.execute('6LdolUQsAAAAAHGCD5SZQn4cfvB_FjrQ3fcKfIa1', {action: 'submit'});
                 
                 // Préparer les données
                 const formData = {
@@ -165,7 +165,8 @@
                     messageDiv.style.display = 'block';
                 }
             } catch (error) {
-                messageDiv.textContent = '❌ Erreur de connexion. Veuillez réessayer.';
+                console.error('Erreur détaillée:', error);
+                messageDiv.textContent = '❌ Erreur de connexion: ' + error.message + '. Veuillez réessayer.';
                 messageDiv.className = 'message error';
                 messageDiv.style.display = 'block';
             } finally {
