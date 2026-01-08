@@ -1,2 +1,21 @@
+# Vercel
 .vercel
+
+# Variables d'environnement
 .env*.local
+.env.local
+
+# Logs
+*.log
+vercel-dev.log
+
+# Node
+node_modules/
+
+# Claude Code
+.claude/
+
+# Fichiers temporaires
+*.tmp
+.DS_Store
+Thumbs.db
