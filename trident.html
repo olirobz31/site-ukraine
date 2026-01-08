@@ -37,7 +37,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
+
+    <!-- Google reCAPTCHA v3 - Chargé conditionnellement après consentement -->
+
+    <!-- Gestion du consentement aux cookies -->
+    <link href="cookie-consent.css" rel="stylesheet">
+
     <!-- SEO : Données structurées Schema.org -->
     <script type="application/ld+json">
     {
@@ -178,6 +183,79 @@
     <a href="cookies.html">Cookies</a>
 </div>
     </footer>
+
+    <!-- Bannière de consentement aux cookies -->
+    <div id="cookie-consent-banner" class="cookie-consent-banner">
+        <div class="cookie-consent-content">
+            <div class="cookie-consent-text">
+                <h3>🍪 Nous utilisons des cookies</h3>
+                <p>
+                    Ce site utilise des cookies pour assurer la sécurité et le bon fonctionnement des formulaires (reCAPTCHA).
+                    En continuant, vous acceptez notre <a href="cookies.html">politique de cookies</a> et notre
+                    <a href="confidentialite.html">politique de confidentialité</a>.
+                </p>
+            </div>
+            <div class="cookie-consent-buttons">
+                <button id="cookie-accept-all" class="cookie-consent-btn cookie-consent-btn-accept">
+                    Tout accepter
+                </button>
+                <button id="cookie-settings" class="cookie-consent-btn cookie-consent-btn-settings">
+                    Paramètres
+                </button>
+                <button id="cookie-decline" class="cookie-consent-btn cookie-consent-btn-decline">
+                    Refuser
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de paramètres des cookies -->
+    <div id="cookie-settings-modal" class="cookie-settings-modal">
+        <div class="cookie-settings-content">
+            <h2>Paramètres des cookies</h2>
+
+            <div class="cookie-category">
+                <h3>
+                    Cookies nécessaires
+                    <label class="cookie-toggle">
+                        <input type="checkbox" checked disabled>
+                        <span class="cookie-toggle-slider"></span>
+                    </label>
+                </h3>
+                <p>
+                    Ces cookies sont essentiels au fonctionnement du site et ne peuvent pas être désactivés.
+                    Ils incluent votre choix de consentement.
+                </p>
+            </div>
+
+            <div class="cookie-category">
+                <h3>
+                    Protection anti-spam (reCAPTCHA)
+                    <label class="cookie-toggle">
+                        <input type="checkbox" id="toggle-recaptcha">
+                        <span class="cookie-toggle-slider"></span>
+                    </label>
+                </h3>
+                <p>
+                    Google reCAPTCHA protège les formulaires contre le spam et les abus.
+                    Il collecte des informations sur votre navigation pour détecter les comportements suspects.
+                    <a href="https://policies.google.com/privacy" target="_blank">Politique de Google</a>
+                </p>
+            </div>
+
+            <div class="cookie-settings-actions">
+                <button id="cookie-save-preferences" class="cookie-consent-btn cookie-consent-btn-accept">
+                    Sauvegarder mes choix
+                </button>
+                <button id="cookie-close-modal" class="cookie-consent-btn cookie-consent-btn-decline">
+                    Annuler
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="cookie-consent.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
